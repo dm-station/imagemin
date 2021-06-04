@@ -1,0 +1,359 @@
+<html style="font-size: 62.5px;"><head lang="en">
+    <meta charset="utf-8">
+    <!-- <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>猫奴大比拼</title>
+    <script src="//g.alicdn.com/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script>
+        setFontSize();
+        window.onresize = function() {setFontSize();};
+        function setFontSize() {document.getElementsByTagName('html')[0].style.fontSize =parseInt(document.documentElement.clientWidth) / 7.5 + 'px';}
+    </script>
+
+    <link href="./css/reset.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <audio id="audio" src="media/music.mp3"  style="display:none"> </audio>
+    <div id="main">
+        <div id="bgDiv" class="">
+            <!-- <img class="abs" src="img/1.jpg"> -->
+            <!-- <img class="abs bg" src="img/bg.png"> -->
+            <img class="abs start_bg" src="img/start_bg.png">
+            <img class="abs start_red" src="img/start_red.png">
+            <img class="abs start swing" src="img/start.png">
+            <img class="abs bg_copy none" src="img/copy.png">
+
+            <!-- <img class="abs message" style="top: 8rem;" src="img/message.png">
+            <textarea class="abs message_textarea" style="top: 8.7rem;" rows="4"></textarea> -->
+        </div>
+
+        <div id="answer" class="none">
+            <!-- <img class="abs" src="img/2.jpg"> -->
+            <img class="abs answer_top" src="img/answer_top.png">
+
+            <!-- 第一部分--打1-5星 -->
+            <img class="abs answer_t1" src="img/answer_t1.png">
+            <img class="abs answer_box1" src="img/answer_box1.png">
+            <div class="box1s">
+                <!-- <img class="fl star0" src="img/star0.png">
+                <img class="fl star1" src="img/star0.png">
+                <img class="fl star2" src="img/star0.png">
+                <img class="fl star3" src="img/star0.png">
+                <img class="fl star4" src="img/star0.png">
+                <img class="fl star5" src="img/star0.png">
+                <img class="fl star6" src="img/star0.png">
+                <img class="fl star7" src="img/star0.png"> -->
+            </div>
+
+            <div class="box1">
+                <!-- <div data-star="1" class="answer1">
+                    <div class="fl star"></div>
+                </div> -->
+            </div>
+
+            <!-- 第二部分--选择想要的答案 -->
+            <img class="abs answer_t2" src="img/answer_t2.png">
+            <img class="abs answer_box2" src="img/answer_box2.png">
+
+            <div id="water1" data-water="0">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+            </div>
+
+            <div id="water2" data-water="1">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+            </div>
+
+            <div id="water3" data-water="2">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+            </div>
+
+            <div id="water4" data-water="3">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type mt" src="img/btn_type2.png">
+                <img class="fl btn_type mt" src="img/btn_type2.png">
+            </div>
+
+            <div id="water5" data-water="4">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+            </div>
+
+            <div id="water6" data-water="5">
+                <img class="fl btn_type" src="img/btn_type2.png">
+                <img class="fl btn_type" src="img/btn_type2.png">
+            </div>
+
+            <!-- 第三部分--其他需求 -->
+            <img class="abs message" src="img/message.png">
+            <textarea class="abs message_textarea" rows="4"></textarea>
+
+            <img class="abs start_red btn_l" src="img/start_red.png">
+            <img class="abs answer_btn swing" src="img/answer_btn.png">
+            <img class="abs start_red btn_r" src="img/start_red.png">
+        </div>
+
+        <div id="red" class="none">
+            <!-- <img class="abs" src="img/3.jpg"> -->
+            <img class="abs red_t1" src="img/red_t1.png">
+            <p class="abs red_text">恭喜中了0元红包</p>
+            <img class="abs red_t2" src="img/red_t2.png">
+            <img class="abs copy" src="img/copy.png">
+            <img class="abs red_t3" src="img/red_t3.png">
+
+            <!-- <img class="abs start_bg" src="img/start_bg.png">
+            <img class="abs start_red" src="img/start_red.png">
+            <img class="abs start" src="img/start.png"> -->
+            <!-- <canvas id="myCanvas" width="750" height="1448" style="width: 100%;" ></canvas> -->
+            
+        </div>
+
+        <div id="no" class="none">
+            <!-- <img class="abs" src="img/4.jpg"> -->
+            <img class="abs no" src="img/no.png">
+            
+        </div>
+        <img class="abs save none" src="img/save.png">
+
+    </div>
+
+    
+<div class="none">
+    <script type="text/javascript" src='https://w.cnzz.com/c.php?id=1278248613&l=3'></script>
+</div>
+<script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./js/html2canvas.js"></script>
+<script type="text/javascript" src="./js/demo.js"></script>
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    document.addEventListener("WeixinJSBridgeReady", function () {
+		WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+			document.getElementById('audio').play();
+			// document.getElementById('audio').pause();
+		});
+	}, false);
+
+	var audio=document.getElementById("audio");
+	audio.addEventListener('ended', function () {
+		audio.play();
+	}, false);
+	var u = navigator.userAgent, app = navigator.appVersion;
+	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if(isIOS){
+        $('#answer').addClass('abs');
+    }
+    var isWeixin = u.indexOf('micromessenger') != -1;
+    if (!isWeixin) {
+        // window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=888"
+    }
+	
+	document.body.addEventListener('focusout', () => {
+		if (isAndroid) return
+        var currentPosition,timer;
+        var speed=1;//页面滚动距离
+        timer=setInterval(function(){
+            currentPosition=document.documentElement.scrollTop || document.body.scrollTop;
+            currentPosition-=speed;
+            window.scrollTo(0,currentPosition);//页面向上滚动
+            currentPosition+=speed; //speed变量
+            window.scrollTo(0,currentPosition);//页面向下滚动
+            clearInterval(timer);
+        },1);
+    })
+</script>
+<script>
+    $.ajax({
+        url: "//api.slb.moneplus.cn/jssdk/share_list.php",
+        type: "GET",
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        data: {
+            'url':window.location.protocol+'//'+ location.hostname + location.pathname + location.search
+            //  'url': location.hostname + location.pathname + location.search
+        },
+        success: function(result){
+            console.log(result)
+            wx.config({
+                debug: false,
+                appId: result.appId,
+                timestamp: result.timestamp,
+                nonceStr: result.nonceStr,
+                signature: result.signature,
+                jsApiList: [
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage'
+                ]
+            })
+            updata();
+        },
+        error:function(res){
+            alert(res);
+        }
+    });
+    
+    // 微信分享
+    function updata(){
+        wx.ready(function (e) {
+            // wxReady();
+            wx.onMenuShareTimeline({//分享到朋友圈
+                title:'震惊！Ta竟然这样对待自家主子',
+                desc: '你也快来试试吧！',
+                link: 'http://api.slb.moneplus.cn/ci/auth/make?url=481a3e57991df345b6509e4db04ab69dd0a847a1',
+                imgUrl: 'http://cdn.campaign.realh5.cn/2019/pets/share.png',
+                success: function () {
+                    // _hmt.push(['_trackEvent', '微信分享', '朋友圈', '成功']);
+                    _czc.push(['_trackEvent', '微信分享', '朋友圈', '成功'])
+                    console.log('onMenuShareTimeline')
+                },
+                cancel: function () {
+                    // _hmt.push(['_trackEvent', '微信分享', '朋友圈', '取消']);
+                }
+            })
+            
+            wx.onMenuShareAppMessage({//分享好友
+                title: '震惊！Ta竟然这样对待自家主子',
+                desc: '你也快来试试吧！',
+                link: 'http://api.slb.moneplus.cn/ci/auth/make?url=481a3e57991df345b6509e4db04ab69dd0a847a1',
+                imgUrl: 'http://cdn.campaign.realh5.cn/2019/pets/share.png',
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    // _hmt.push(['_trackEvent', '微信分享', '好友', '成功']);
+                    _czc.push(['_trackEvent', '微信分享', '好友', '成功'])
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                    // _hmt.push(['_trackEvent', '微信分享', '好友', '取消']);
+                }
+            });
+        });
+    }
+    
+
+</script>
+
+<script>
+    window.NVC_Opt = {
+        //无痕配置 && 滑动验证、刮刮卡验证通用配置。
+        //应用类型标识。它和使用场景标识（scene字段）一起决定了无痕验证的业务场景与后端对应使用的策略模型。您可以在人机验证控制台的配置管理页签找到对应的appkey字段值，请务必正确填写。
+        appkey:'FFFF0N000000000086DC',
+        //使用场景标识。它和应用类型标识（appkey字段）一起决定了滑动验证的业务场景与后端对应使用的策略模型。您可以在人机验证控制台的配置管理页签找到对应的scene值，请务必正确填写。
+        scene:'nvc_activity_h5',
+        //是否HTML5页面。对于HTML5页面类型，该参数值需填写true。
+        isH5:true,
+        //二次验证的唤醒方式。true为浮层式，false为嵌入式。
+        popUp:false,
+        //声明二次验证需要渲染的目标元素ID。
+        renderTo:'#captcha',
+        //回调参数。
+        nvcCallback:function(data){
+            // 其中，data为getNVCVal()函数的值，该函数为二次验证滑动或者刮刮卡通过后的回调函数。
+            // data与业务请求一同上传，由后端请求AnalyzeNvc接口并返回100或者900。
+        },
+        //业务键字段，可为空。该参数可用于上线前测试，请按照代码集成后测试部分中的方法配置该字段值。
+        trans: {"key1": "code0","nvcCode":400},
+        //二次验证组件的语言，默认为cn（简体中文）。详细配置方法请参见自定义文案文档。
+        language: "cn",
+        //当唤醒滑动验证作为二次验证时，配置滑动验证组件的宽度。
+        customWidth: 300,
+        //当唤醒刮刮卡验证作为二次验证时，配置刮刮卡组件的宽度。
+        width: 300,
+        //当唤醒刮刮卡验证作为二次验证时，配置刮刮卡组件的高度。
+        height: 100,
+        //当唤醒刮刮卡验证作为二次验证时，配置需要刮出的两个elements的图片资源。
+        elements: [
+            '//img.alicdn.com/tfs/TB17cwllsLJ8KJjy0FnXXcFDpXa-50-74.png',
+            '//img.alicdn.com/tfs/TB17cwllsLJ8KJjy0FnXXcFDpXa-50-74.png'
+        ], 
+        //当唤醒刮刮卡验证作为二次验证时，配置刮动时的背景图像（自动应用平铺填充的方式）。
+        bg_back_prepared: '//img.alicdn.com/tps/TB1skE5SFXXXXb3XXXXXXXXXXXX-100-80.png',
+        //当唤醒刮刮卡验证作为二次验证时，配置刮动时的前景图像（仅支持base64数据流）。
+        bg_front: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABQCAMAAADY1yDdAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURefk5w+ruswAAAAfSURBVFjD7cExAQAAAMKg9U9tCU+gAAAAAAAAAIC3AR+QAAFPlUGoAAAAAElFTkSuQmCC',
+        //当唤醒刮刮卡验证作为二次验证时，配置验证通过时显示的图标资源。
+        obj_ok: '//img.alicdn.com/tfs/TB1rmyTltfJ8KJjy0FeXXXKEXXa-50-74.png',
+        //当唤醒刮刮卡验证作为二次验证时，配置验证通过时显示的背景图像（自动应用平铺填充的方式）。
+        bg_back_pass: '//img.alicdn.com/tfs/TB1KDxCSVXXXXasXFXXXXXXXXXX-100-80.png',
+        //当唤醒刮刮卡验证作为二次验证时，配置验证失败或异常时显示的图标资源。
+        obj_error: '//img.alicdn.com/tfs/TB1q9yTltfJ8KJjy0FeXXXKEXXa-50-74.png',
+        //当唤醒刮刮卡验证作为二次验证时，配置验证失败或异常时显示的背景图像（自动应用平铺填充的方式）。
+        bg_back_fail: '//img.alicdn.com/tfs/TB1w2oOSFXXXXb4XpXXXXXXXXXX-100-80.png',
+        //当唤醒刮刮卡验证作为二次验证时，用于自定义文案。详细配置方法请参见自定义文案文档。
+        upLang:{"cn":{
+            _ggk_guide: "请摁住鼠标左键，刮出两面盾牌",
+            _ggk_success: "恭喜您成功刮出盾牌<br/>继续下一步操作吧",
+            _ggk_loading: "加载中",
+            _ggk_fail: ['呀，盾牌不见了<br/>请', "javascript:noCaptcha.reset()", '再来一次', '或', "http://survey.taobao.com/survey/QgzQDdDd?token=%TOKEN", '反馈问题'],
+            _ggk_action_timeout: ['我等得太久啦<br/>请', "javascript:noCaptcha.reset()", '再来一次', '或', "http://survey.taobao.com/survey/QgzQDdDd?token=%TOKEN", '反馈问题'],
+            _ggk_net_err: ['网络实在不给力<br/>请', "javascript:noCaptcha.reset()", '再来一次', '或', "http://survey.taobao.com/survey/QgzQDdDd?token=%TOKEN", '反馈问题'],
+            _ggk_too_fast: ['您刮得太快啦<br/>请', "javascript:noCaptcha.reset()", '再来一次', '或', "http://survey.taobao.com/survey/QgzQDdDd?token=%TOKEN", '反馈问题']
+            }
+        }
+    }
+</script>
+<script src="//g.alicdn.com/sd/nvc/1.1.112/guide.js"></script>
+<script>
+    function yourRegisterRequest(url, params){
+        var callbackName = ('jsonp_' + Math.random()).replace('.', '');
+        params += '&callback=' + callbackName;
+        var o_scripts = document.getElementsByTagName("script")[0];
+        var o_s = document.createElement('script');
+        o_scripts.parentNode.insertBefore(o_s, o_scripts);
+        //您注册请求的业务回调。
+        window[callbackName] = function(json) {
+            if(json.result.code == 400) {
+                //唤醒滑动验证
+                getNC().then(function(){
+                    _nvc_nc.upLang('cn', {
+                        _startTEXT: "请按住滑块，拖动到最右边",
+                        _yesTEXT: "验证通过",
+                        _error300: "哎呀，出错了，点击<a href=\"javascript:__nc.reset()\">刷新</a>再来一次",
+                        _errorNetwork: "网络不给力，请<a href=\"javascript:__nc.reset()\">点击刷新</a>",
+                    })
+                    _nvc_nc.reset()
+                })
+            } else if (json.result.code == 600) {
+                //唤醒刮刮卡
+                getSC().then(function(){})
+            } else if (json.result.code == 700) {
+                //唤醒问答验证码。由于问答验证码组件升级中，服务端暂时不会返回code为700的结果。您可以保留该部分的接入代码。
+                getLC();
+            } else if (json.result.code == 100 || json.result.code == 200) {
+                //注册成功
+                nvcReset();
+                alert("register success!")
+            } else if (json.result.code == 800 || json.result.code == 900) {
+                //直接拦截
+                nvcReset();
+                alert("register failed!")
+            }
+        };
+        o_s.src = url + '?' + params;
+    }
+    // document.getElementById('register').onclick = function() {
+    //     //将以下getNVCVal()函数的值，跟随业务请求一起上传，由后端请求AnalyzeNvc接口并返回200，400，600或者800。
+    //     var params = 'a=' + getNVCVal();
+    //     yourRegisterRequest('http://cf.aliyun.com/nvc/nvcAnalyze.jsonp', params)
+    // }
+</script>
+
+</body>
+</html>
